@@ -42,9 +42,10 @@ class Dev(Configuration):
       'django.contrib.sessions',
       'django.contrib.messages',
       'django.contrib.staticfiles',
-      'gh',
       'django_celery_results',
+      'gh',
       'movies',
+      'omdb',
   ]
 
   MIDDLEWARE = [
@@ -163,3 +164,7 @@ class Dev(Configuration):
   OMDB_KEY = "abc123"
   CELERY_RESULT_BACKEND = "django-db"
   CELERY_BROKER_URL = "redis://localhost:6379/0"
+  EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+  ADMINS = [("Thiru", "thiru@example.com")]
+
+
