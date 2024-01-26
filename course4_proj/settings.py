@@ -46,6 +46,7 @@ class Dev(Configuration):
       'gh',
       'movies',
       'omdb',
+      'django_celery_beat',
   ]
 
   MIDDLEWARE = [
