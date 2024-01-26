@@ -2,6 +2,8 @@ class OmdbClient:
     def __init__(self, api_key):
         self.api_key = api_key
 
+    
+
     def make_request(self, params):
         """Make a GET request to the API, automatically adding the `apikey` to parameters."""
         params["apikey"] = self.api_key
@@ -39,3 +41,9 @@ class OmdbClient:
                 break
 
             page += 1
+
+
+def get_client_from_settings():
+      """Create an instance of an OmdbClient using the OMDB_KEY
+      from the Django settings."""
+      return OmdbClient(settings.OMDB_KEY)

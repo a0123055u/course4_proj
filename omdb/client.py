@@ -62,7 +62,7 @@ class OmdbMovie:
 class OmdbClient:
     def __init__(self, api_key):
         self.api_key = api_key
-
+    
     def make_request(self, params):
         """Make a GET request to the API, automatically adding the `apikey` to parameters."""
         params["apikey"] = self.api_key
